@@ -1,0 +1,448 @@
+local plr = game.Workspace:FindFirstChild(game.Players.LocalPlayer.Name)
+
+local PlrEditor = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local Category = Instance.new("Frame")
+local HumanoidButton = Instance.new("TextButton")
+local AvatarButton = Instance.new("TextButton")
+local OtherButton = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
+local Avatar = Instance.new("Frame")
+local Title_2 = Instance.new("TextLabel")
+local ShirtID = Instance.new("Frame")
+local SetID = Instance.new("TextButton")
+local TypeID = Instance.new("TextBox")
+local PantsID = Instance.new("Frame")
+local SetID_2 = Instance.new("TextButton")
+local TypeID_2 = Instance.new("TextBox")
+local FaceID = Instance.new("Frame")
+local SetID_3 = Instance.new("TextButton")
+local TypeID_3 = Instance.new("TextBox")
+local Humanoid = Instance.new("Frame")
+local Title_3 = Instance.new("TextLabel")
+local WalkSpeed = Instance.new("Frame")
+local SetWalkSpeed = Instance.new("TextButton")
+local TypeWalkSpeed = Instance.new("TextBox")
+local JumpPower = Instance.new("Frame")
+local SetJumpPower = Instance.new("TextButton")
+local TypeJumpPower = Instance.new("TextBox")
+local Trip = Instance.new("TextButton")
+local Sit = Instance.new("TextButton")
+local Divider = Instance.new("Frame")
+local Other = Instance.new("Frame")
+local Title_4 = Instance.new("TextLabel")
+local FPS = Instance.new("TextLabel")
+local Ping = Instance.new("TextLabel")
+local HelpText = Instance.new("TextLabel")
+
+--Properties:
+
+PlrEditor.Name = "PlrEditor"
+PlrEditor.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+PlrEditor.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+PlrEditor.ResetOnSpawn = false
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = PlrEditor
+MainFrame.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 5
+MainFrame.Position = UDim2.new(0.267287225, 0, 0.271899879, 0)
+MainFrame.Size = UDim2.new(0, 700, 0, 400)
+MainFrame.Active = true
+MainFrame.Selectable = true
+MainFrame.Draggable = true
+
+Category.Name = "Category"
+Category.Parent = MainFrame
+Category.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+Category.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Category.BorderSizePixel = 5
+Category.Size = UDim2.new(0, 200, 0, 400)
+
+HumanoidButton.Name = "HumanoidButton"
+HumanoidButton.Parent = Category
+HumanoidButton.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+HumanoidButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HumanoidButton.BorderSizePixel = 3
+HumanoidButton.Position = UDim2.new(0.075000003, 0, 0.075000003, 0)
+HumanoidButton.Size = UDim2.new(0, 170, 0, 75)
+HumanoidButton.Font = Enum.Font.GothamSemibold
+HumanoidButton.Text = "Humanoid"
+HumanoidButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+HumanoidButton.TextScaled = true
+HumanoidButton.TextSize = 14.000
+HumanoidButton.TextWrapped = true
+HumanoidButton.MouseButton1Click:connect(function()
+	Humanoid.Visible = true
+	Avatar.Visible = false
+	Other.Visible = false
+end)
+
+AvatarButton.Name = "AvatarButton"
+AvatarButton.Parent = Category
+AvatarButton.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+AvatarButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AvatarButton.BorderSizePixel = 3
+AvatarButton.Position = UDim2.new(0.075000003, 0, 0.407499999, 0)
+AvatarButton.Size = UDim2.new(0, 170, 0, 75)
+AvatarButton.Font = Enum.Font.GothamSemibold
+AvatarButton.Text = "Avatar"
+AvatarButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+AvatarButton.TextScaled = true
+AvatarButton.TextSize = 14.000
+AvatarButton.TextWrapped = true
+AvatarButton.MouseButton1Click:connect(function()
+	Humanoid.Visible = false
+	Avatar.Visible = true
+	Other.Visible = false
+end)
+
+OtherButton.Name = "OtherButton"
+OtherButton.Parent = Category
+OtherButton.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+OtherButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OtherButton.BorderSizePixel = 3
+OtherButton.Position = UDim2.new(0.075000003, 0, 0.737500012, 0)
+OtherButton.Size = UDim2.new(0, 170, 0, 75)
+OtherButton.Font = Enum.Font.GothamSemibold
+OtherButton.Text = "Other"
+OtherButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+OtherButton.TextScaled = true
+OtherButton.TextSize = 14.000
+OtherButton.TextWrapped = true
+OtherButton.MouseButton1Click:connect(function()
+	Humanoid.Visible = false
+	Avatar.Visible = false
+	Other.Visible = true
+end)
+
+Title.Name = "Title"
+Title.Parent = MainFrame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.Position = UDim2.new(0.300000012, 0, 0.0250000004, 0)
+Title.Size = UDim2.new(0, 480, 0, 60)
+Title.ZIndex = 1002
+Title.Font = Enum.Font.GothamBold
+Title.Text = "ItzPratix's Player Editor"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+Avatar.Name = "Avatar"
+Avatar.Parent = MainFrame
+Avatar.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+Avatar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Avatar.BorderSizePixel = 5
+Avatar.Position = UDim2.new(0.292161822, 0, -0.000600129366, 0)
+Avatar.Size = UDim2.new(0, 495, 0, 400)
+Avatar.Visible = false
+
+Title_2.Name = "Title"
+Title_2.Parent = Avatar
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_2.Position = UDim2.new(0.0101010101, 0, 0.0250000004, 0)
+Title_2.Size = UDim2.new(0, 481, 0, 60)
+Title_2.ZIndex = 1002
+Title_2.Font = Enum.Font.GothamBold
+Title_2.Text = "ItzPratix's Player Editor"
+Title_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title_2.TextScaled = true
+Title_2.TextSize = 14.000
+Title_2.TextWrapped = true
+
+ShirtID.Name = "ShirtID"
+ShirtID.Parent = Avatar
+ShirtID.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ShirtID.BackgroundTransparency = 1.000
+ShirtID.BorderColor3 = Color3.fromRGB(255, 255, 255)
+ShirtID.Size = UDim2.new(0, 100, 0, 100)
+
+SetID.Name = "SetID"
+SetID.Parent = ShirtID
+SetID.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+SetID.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SetID.BorderSizePixel = 3
+SetID.Position = UDim2.new(0.109999999, 0, 2.94999981, 0)
+SetID.Size = UDim2.new(0, 225, 0, 60)
+SetID.Font = Enum.Font.GothamSemibold
+SetID.Text = "Set Shirt ID"
+SetID.TextColor3 = Color3.fromRGB(0, 0, 0)
+SetID.TextSize = 30.000
+SetID.MouseButton1Click:connect(function()
+	plr.Shirt.ShirtTemplate = TypeID.Text
+end)
+
+TypeID.Name = "TypeID"
+TypeID.Parent = ShirtID
+TypeID.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+TypeID.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TypeID.BorderSizePixel = 3
+TypeID.Position = UDim2.new(2.52999997, 0, 2.95000005, 0)
+TypeID.Size = UDim2.new(0, 225, 0, 60)
+TypeID.Font = Enum.Font.GothamSemibold
+TypeID.PlaceholderText = "ID Here"
+TypeID.Text = ""
+TypeID.TextColor3 = Color3.fromRGB(0, 0, 0)
+TypeID.TextScaled = true
+TypeID.TextSize = 14.000
+TypeID.TextWrapped = true
+
+PantsID.Name = "PantsID"
+PantsID.Parent = Avatar
+PantsID.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PantsID.BackgroundTransparency = 1.000
+PantsID.BorderColor3 = Color3.fromRGB(255, 255, 255)
+PantsID.Size = UDim2.new(0, 100, 0, 100)
+
+SetID_2.Name = "SetID"
+SetID_2.Parent = PantsID
+SetID_2.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+SetID_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SetID_2.BorderSizePixel = 3
+SetID_2.Position = UDim2.new(0.109999895, 0, 1.04999995, 0)
+SetID_2.Size = UDim2.new(0, 225, 0, 60)
+SetID_2.Font = Enum.Font.GothamSemibold
+SetID_2.Text = "Set Pants ID"
+SetID_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+SetID_2.TextSize = 29.000
+SetID_2.MouseButton1Click:connect(function()
+	plr.Pants.PantsTemplate = TypeID_2.Text
+end)
+
+TypeID_2.Name = "TypeID"
+TypeID_2.Parent = PantsID
+TypeID_2.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+TypeID_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TypeID_2.BorderSizePixel = 3
+TypeID_2.Position = UDim2.new(2.52999997, 0, 1.05000007, 0)
+TypeID_2.Size = UDim2.new(0, 225, 0, 60)
+TypeID_2.Font = Enum.Font.GothamSemibold
+TypeID_2.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
+TypeID_2.PlaceholderText = "ID Here"
+TypeID_2.Text = ""
+TypeID_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TypeID_2.TextScaled = true
+TypeID_2.TextSize = 14.000
+TypeID_2.TextWrapped = true
+
+FaceID.Name = "FaceID"
+FaceID.Parent = Avatar
+FaceID.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FaceID.BackgroundTransparency = 1.000
+FaceID.BorderColor3 = Color3.fromRGB(255, 255, 255)
+FaceID.Size = UDim2.new(0, 100, 0, 100)
+
+SetID_3.Name = "SetID"
+SetID_3.Parent = FaceID
+SetID_3.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+SetID_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SetID_3.BorderSizePixel = 3
+SetID_3.Position = UDim2.new(0.109999999, 0, 2.00999975, 0)
+SetID_3.Size = UDim2.new(0, 225, 0, 60)
+SetID_3.Font = Enum.Font.GothamSemibold
+SetID_3.Text = "Set Face ID"
+SetID_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+SetID_3.TextSize = 30.000
+SetID_3.MouseButton1Click:connect(function()
+	plr.Head.face.Texture = TypeID_3.Text
+end)
+
+TypeID_3.Name = "TypeID"
+TypeID_3.Parent = FaceID
+TypeID_3.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+TypeID_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TypeID_3.BorderSizePixel = 3
+TypeID_3.Position = UDim2.new(2.52999997, 0, 2, 0)
+TypeID_3.Size = UDim2.new(0, 225, 0, 60)
+TypeID_3.Font = Enum.Font.GothamSemibold
+TypeID_3.PlaceholderText = "ID Here"
+TypeID_3.Text = ""
+TypeID_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TypeID_3.TextScaled = true
+TypeID_3.TextSize = 14.000
+TypeID_3.TextWrapped = true
+
+Humanoid.Name = "Humanoid"
+Humanoid.Parent = MainFrame
+Humanoid.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+Humanoid.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Humanoid.BorderSizePixel = 5
+Humanoid.Position = UDim2.new(0.292161822, 0, -0.000600129366, 0)
+Humanoid.Size = UDim2.new(0, 495, 0, 400)
+Humanoid.Visible = false
+
+Title_3.Name = "Title"
+Title_3.Parent = Humanoid
+Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.BackgroundTransparency = 1.000
+Title_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_3.Position = UDim2.new(0.0101010101, 0, 0.0250000004, 0)
+Title_3.Size = UDim2.new(0, 481, 0, 60)
+Title_3.ZIndex = 1002
+Title_3.Font = Enum.Font.GothamBold
+Title_3.Text = "ItzPratix's Player Editor"
+Title_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title_3.TextScaled = true
+Title_3.TextSize = 14.000
+Title_3.TextWrapped = true
+
+WalkSpeed.Name = "WalkSpeed"
+WalkSpeed.Parent = Humanoid
+WalkSpeed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WalkSpeed.BackgroundTransparency = 1.000
+WalkSpeed.BorderColor3 = Color3.fromRGB(255, 255, 255)
+WalkSpeed.Size = UDim2.new(0, 100, 0, 100)
+
+SetWalkSpeed.Name = "SetWalkSpeed"
+SetWalkSpeed.Parent = WalkSpeed
+SetWalkSpeed.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+SetWalkSpeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SetWalkSpeed.BorderSizePixel = 3
+SetWalkSpeed.Position = UDim2.new(0.109999999, 0, 3.0999999, 0)
+SetWalkSpeed.Size = UDim2.new(0, 225, 0, 60)
+SetWalkSpeed.Font = Enum.Font.GothamSemibold
+SetWalkSpeed.Text = "Set Walk Speed"
+SetWalkSpeed.TextColor3 = Color3.fromRGB(0, 0, 0)
+SetWalkSpeed.TextSize = 30.000
+SetWalkSpeed.MouseButton1Click:connect(function()
+	plr.Humanoid.WalkSpeed = TypeWalkSpeed.Text
+end)
+
+TypeWalkSpeed.Name = "TypeWalkSpeed"
+TypeWalkSpeed.Parent = WalkSpeed
+TypeWalkSpeed.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+TypeWalkSpeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TypeWalkSpeed.BorderSizePixel = 3
+TypeWalkSpeed.Position = UDim2.new(0.109999999, 0, 2.27999997, 0)
+TypeWalkSpeed.Size = UDim2.new(0, 225, 0, 60)
+TypeWalkSpeed.Font = Enum.Font.GothamSemibold
+TypeWalkSpeed.PlaceholderText = "Value Here"
+TypeWalkSpeed.Text = ""
+TypeWalkSpeed.TextColor3 = Color3.fromRGB(0, 0, 0)
+TypeWalkSpeed.TextScaled = true
+TypeWalkSpeed.TextSize = 14.000
+TypeWalkSpeed.TextWrapped = true
+
+JumpPower.Name = "JumpPower"
+JumpPower.Parent = Humanoid
+JumpPower.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+JumpPower.BackgroundTransparency = 1.000
+JumpPower.BorderColor3 = Color3.fromRGB(255, 255, 255)
+JumpPower.Size = UDim2.new(0, 100, 0, 100)
+
+SetJumpPower.Name = "SetJumpPower"
+SetJumpPower.Parent = JumpPower
+SetJumpPower.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+SetJumpPower.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SetJumpPower.BorderSizePixel = 3
+SetJumpPower.Position = UDim2.new(2.53999996, 0, 3.0999999, 0)
+SetJumpPower.Size = UDim2.new(0, 225, 0, 60)
+SetJumpPower.Font = Enum.Font.GothamSemibold
+SetJumpPower.Text = "Set Jump Power"
+SetJumpPower.TextColor3 = Color3.fromRGB(0, 0, 0)
+SetJumpPower.TextSize = 29.000
+SetJumpPower.MouseButton1Click:connect(function()
+	plr.Humanoid.JumpPower = TypeJumpPower.Text
+end)
+
+TypeJumpPower.Name = "TypeJumpPower"
+TypeJumpPower.Parent = JumpPower
+TypeJumpPower.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+TypeJumpPower.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TypeJumpPower.BorderSizePixel = 3
+TypeJumpPower.Position = UDim2.new(2.53999996, 0, 2.27999997, 0)
+TypeJumpPower.Size = UDim2.new(0, 225, 0, 60)
+TypeJumpPower.Font = Enum.Font.GothamSemibold
+TypeJumpPower.PlaceholderText = "Value Here"
+TypeJumpPower.Text = ""
+TypeJumpPower.TextColor3 = Color3.fromRGB(0, 0, 0)
+TypeJumpPower.TextScaled = true
+TypeJumpPower.TextSize = 14.000
+TypeJumpPower.TextWrapped = true
+
+Trip.Name = "Trip"
+Trip.Parent = Humanoid
+Trip.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+Trip.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trip.BorderSizePixel = 3
+Trip.Position = UDim2.new(0.0208081007, 0, 0.257500052, 0)
+Trip.Size = UDim2.new(0, 225, 0, 60)
+Trip.Font = Enum.Font.GothamSemibold
+Trip.Text = "Trip"
+Trip.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trip.TextScaled = true
+Trip.TextSize = 29.000
+Trip.TextWrapped = true
+Trip.MouseButton1Click:connect(function()
+	plr.Humanoid.PlatformStand = true
+end)
+
+Sit.Name = "Sit"
+Sit.Parent = Humanoid
+Sit.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+Sit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sit.BorderSizePixel = 3
+Sit.Position = UDim2.new(0.5117172, 0, 0.257500052, 0)
+Sit.Size = UDim2.new(0, 225, 0, 60)
+Sit.Font = Enum.Font.GothamSemibold
+Sit.Text = "Sit"
+Sit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Sit.TextScaled = true
+Sit.TextSize = 29.000
+Sit.TextWrapped = true
+Sit.MouseButton1Click:connect(function()
+	plr.Humanoid.Sit = true
+end)
+
+Divider.Name = "Divider"
+Divider.Parent = Humanoid
+Divider.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Divider.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Divider.BorderSizePixel = 0
+Divider.Position = UDim2.new(-0.00606060587, 0, 0.495000005, 0)
+Divider.Size = UDim2.new(0, 498, 0, 5)
+
+Other.Name = "Other"
+Other.Parent = MainFrame
+Other.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+Other.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Other.BorderSizePixel = 5
+Other.Position = UDim2.new(0.292161822, 0, -0.000600129366, 0)
+Other.Size = UDim2.new(0, 495, 0, 400)
+Other.Visible = false
+
+Title_4.Name = "Title"
+Title_4.Parent = Other
+Title_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_4.BackgroundTransparency = 1.000
+Title_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_4.Position = UDim2.new(0.0101010101, 0, 0.0250000004, 0)
+Title_4.Size = UDim2.new(0, 481, 0, 60)
+Title_4.ZIndex = 1002
+Title_4.Font = Enum.Font.GothamBold
+Title_4.Text = "ItzPratix's Player Editor"
+Title_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title_4.TextScaled = true
+Title_4.TextSize = 14.000
+Title_4.TextWrapped = true
+
+HelpText.Name = "HelpText"
+HelpText.Parent = Other
+HelpText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HelpText.BackgroundTransparency = 1.000
+HelpText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HelpText.Position = UDim2.new(0.0606060624, 0, 0.174999997, 0)
+HelpText.Size = UDim2.new(0, 265, 0, 300)
+HelpText.ZIndex = 1002
+HelpText.Font = Enum.Font.GothamSemibold
+HelpText.Text = "Q: How do I untrip or unsit myself? A: If you tripped yourself, press sit and then jump!"
+HelpText.TextColor3 = Color3.fromRGB(0, 0, 0)
+HelpText.TextScaled = true
+HelpText.TextSize = 14.000
+HelpText.TextWrapped = true
